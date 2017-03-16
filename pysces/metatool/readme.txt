@@ -1,13 +1,3 @@
-pysces-metatool
-===============
-
-Metatool and bindings for use with PySCeS - adds elementary mode analysis. The MetaTool source code has been slightly altered to allow building under Linux and for use with PySCeS
-
-Brett G. Olivier, Amsterdam 2017.
-
-Metatool
---------
-
 METATOOL is a C program developed from 1998 to 2000 by Thomas Pfeiffer
 (Berlin) in cooperation with Stefan Schuster and Ferdinand
 Moldenhauer (Berlin) and Juan Carlos Nuno (Madrid).
