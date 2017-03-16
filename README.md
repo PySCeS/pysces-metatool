@@ -5,6 +5,8 @@ Metatool and bindings for use with PySCeS - adds elementary mode analysis. The M
 
 Brett G. Olivier, Amsterdam 2017.
 
+PySCeS
+
 Metatool
 --------
 
@@ -519,7 +521,6 @@ Systems, Chapman & Hall, New York.
 See also
 http://www.biologie.hu-berlin.de/biophysics/Theory/tpfeiffer/metatool.html.
 
-======================================================================
 The MetaTool source code has been slightly altered to allow building
 under Linux and for use with PySCeS -- Brett
-======================================================================
+
