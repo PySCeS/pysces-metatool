@@ -18,19 +18,19 @@ Brett G. Olivier
 """
 
 __doc__ = "PySCeS/MetaTool add-on module"
-__version__ = '0.7.1'
+__version__ = '0.7.2'
 
 import os
 
-print """\nMETATOOL is a C program developed from 1998 to 2000 by Thomas Pfeiffer
+print("""\nMETATOOL is a C program developed from 1998 to 2000 by Thomas Pfeiffer
 (Berlin) in cooperation with Stefan Schuster and Ferdinand
-Moldenhauer (Berlin) and Juan Carlos Nuno (Madrid).\n"""
+Moldenhauer (Berlin) and Juan Carlos Nuno (Madrid).\n""")
 
 try:
     from numpy.distutils.core import setup, Extension
-except Exception, ex:
-    print ex
-    print "This requires NumPy and SciPy 0.5x+\n"
+except Exception as ex:
+    print(ex)
+    print("This requires NumPy and SciPy 0.5x+\n")
     os.sys.exit(-1)
 
 ########## From here on it's up to distutils ##########
@@ -42,7 +42,7 @@ os.chdir(local_path)
 myscripts = []
 mydata_files = []
 
-print '\nBuilding metatool'
+print('\nBuilding metatool')
 # Compile the metatool binaries and setup the data file list
 meta_path = os.path.join(local_path,'pysces','metatool')
 os.chdir(meta_path)
@@ -52,7 +52,7 @@ if os.sys.platform == 'win32':
     mydata_files = [(os.path.join('pysces','metatool'), [os.path.join(local_path, 'pysces', 'metatool','meta43_double.exe'), os.path.join(local_path, 'pysces', 'metatool','meta43_int.exe')])]
     mydata_files.append((os.path.join('pysces','metatool'), [os.path.join(local_path, 'pysces', 'metatool','readme.txt'), os.path.join(local_path, 'pysces', 'metatool','readme.txt')]))
 else:
-    print '\nBuilding metatool...\n(mktemp warnings do not affect the compile process)'
+    print('\nBuilding metatool...\n(mktemp warnings do not affect the compile process)')
     #change mode to rwxrwxr--
     os.chmod('build_linux',508)
     if not os.path.exists(os.path.join(meta_path,'meta43_int')) or not os.path.exists(os.path.join(meta_path,'meta43_double')):
